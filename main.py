@@ -11,10 +11,10 @@ from rich.style import Style
 import pystyle
 from pystyle import Colors, Colorate
 
-from alexcpmcheats import CPMalexcheatscpm
+from noelcpm import CPMnoelcpm
 
-__CHANNEL_USERNAME__ = "alexcheatscpm"
-__GROUP_USERNAME__   = "alexcheatscpm"
+__CHANNEL_USERNAME__ = "NOELCPM"
+__GROUP_USERNAME__   = "NOELCPM"
 
 def signal_handler(sig, frame):
     print("\n Bye Bye...")
@@ -134,7 +134,7 @@ if __name__ == "__main__":
         acc_password = prompt_valid_value("[bold][?] Account Password[/bold]", "Password", password=False)
         acc_access_key = prompt_valid_value("[bold][?] Access Key[/bold]", "Access Key", password=False)
         console.print("[bold cyan][%] Trying to Login[/bold cyan]: ", end=None)
-        cpm = CPMElsedev(acc_access_key)
+        cpm = CPMnoelcpm(acc_access_key)
         login_response = cpm.login(acc_email, acc_password)
         if login_response != 0:
             if login_response == 100:
@@ -351,7 +351,7 @@ if __name__ == "__main__":
                 if status == 0:
                     print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
                     print(Colorate.Horizontal(Colors.rainbow, '======================================'))
-                    print(Colorate.Horizontal(Colors.rainbow, f'INFO: In order to tweak this account with CPMElsedev.'))
+                    print(Colorate.Horizontal(Colors.rainbow, f'INFO: In order to tweak this account with NOELCPM.'))
                     print(Colorate.Horizontal(Colors.rainbow, 'you most sign-in to the game using this account.'))
                     sleep(2)
                     continue

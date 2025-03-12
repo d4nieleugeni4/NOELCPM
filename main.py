@@ -40,7 +40,7 @@ def gradient_text(text, colors):
 
 def banner(console):
     os.system('cls' if os.name == 'nt' else 'clear')
-    brand_name =  "ATENCAO PARA USAR A FERRAMENTA E NECESSARIO ADICIONAR CREDITOS COM O @{__IG_USERNAME__}."
+    brand_name =  "ATENCAO PARA USAR A FERRAMENTA E NECESSARIO ADICIONAR CREDITOS COM O @noel_vendascpm."
     colors = [
         "rgb(255,0,0)", "rgb(255,69,0)", "rgb(255,140,0)", "rgb(255,215,0)", "rgb(173,255,47)", 
         "rgb(0,255,0)", "rgb(0,255,255)", "rgb(0,191,255)", "rgb(0,0,255)", "rgb(139,0,255)",
@@ -131,9 +131,9 @@ if __name__ == "__main__":
     signal.signal(signal.SIGINT, signal_handler)
     while True:
         banner(console)
-        acc_email = prompt_valid_value("[bold][?] INSIRA SEU EMAIL:[/bold]", "Email", password=False)
-        acc_password = prompt_valid_value("[bold][?] INSIRA SUA SENHA:[/bold]", "Password", password=False)
-        acc_access_key = prompt_valid_value("[bold][?] INSIRA SUA CHAVE DE ACESSO:[/bold]", "Access Key", password=False)
+        acc_email = prompt_valid_value("[bold][?] INSIRA SEU EMAIL[/bold]", "Email", password=False)
+        acc_password = prompt_valid_value("[bold][?] INSIRA SUA SENHA[/bold]", "Password", password=False)
+        acc_access_key = prompt_valid_value("[bold][?] INSIRA SUA CHAVE DE ACESSO[/bold]", "Access Key", password=False)
         console.print("[bold cyan][%] Tentando Fazer Login[/bold cyan]: ", end=None)
         cpm = CPMnoelcpm(acc_access_key)
         login_response = cpm.login(acc_email, acc_password)

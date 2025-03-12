@@ -13,11 +13,12 @@ from pystyle import Colors, Colorate
 
 from noelcpm import CPMnoelcpm
 
-__CHANNEL_USERNAME__ = "NOELCPM"
-__GROUP_USERNAME__   = "NOELCPM"
+__OWNER_USERNAME__ = "NOEL_VENDASCPM"
+__IG_USERNAME__   = "noel_vendascpm"
+__WHATS_OWNER__   = "+5511978458163"
 
 def signal_handler(sig, frame):
-    print("\n Bye Bye...")
+    print("\n Adeus...")
     sys.exit(0)
 
 def gradient_text(text, colors):
@@ -39,7 +40,7 @@ def gradient_text(text, colors):
 
 def banner(console):
     os.system('cls' if os.name == 'nt' else 'clear')
-    brand_name =  "Car Parking Multiplayer 
+    brand_name =  "ATENCAO PARA USAR A FERRAMENTA E NECESSARIO ADICIONAR CREDITOS COM O @{__IG_USERNAME__}."
     colors = [
         "rgb(255,0,0)", "rgb(255,69,0)", "rgb(255,140,0)", "rgb(255,215,0)", "rgb(173,255,47)", 
         "rgb(0,255,0)", "rgb(0,255,255)", "rgb(0,191,255)", "rgb(0,0,255)", "rgb(139,0,255)",
@@ -48,9 +49,9 @@ def banner(console):
     colorful_text = gradient_text(brand_name, colors)
     console.print(colorful_text)
     print(Colorate.Horizontal(Colors.rainbow, '=================================================================='))
-    print(Colorate.Horizontal(Colors.rainbow, '\t         POR FAVOR, SAIA DO CPM ANTES DE USAR ESTA FERRAMENTA'))
-    print(Colorate.Horizontal(Colors.rainbow, '    O COMPARTILHAMENTO DA CHAVE DE ACESSO NÃO É PERMITIDO E SERÁ BLOQUEADO'))
-    print(Colorate.Horizontal(Colors.rainbow, f' ‌           𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦: @{NOEL_VENDASCPM} 𝐎𝐫 Whatsapp@{__11978458163__}'))
+    print(Colorate.Horizontal(Colors.rainbow, '\t         𝐅𝐀𝐂𝐀 𝐋𝐎𝐆𝐎𝐔𝐓 𝐃𝐎 𝐂𝐏𝐌 𝐀𝐍𝐓𝐄𝐒 𝐃𝐄 𝐔𝐒𝐀𝐑 𝐄𝐒𝐓𝐀 𝐅𝐄𝐑𝐑𝐀𝐌𝐄𝐍𝐓𝐀'))
+    print(Colorate.Horizontal(Colors.rainbow, '    𝐂𝐎𝐌𝐏𝐀𝐑𝐓𝐈𝐋𝐇𝐀𝐑 𝐀 𝐂𝐇𝐀𝐕𝐄 𝐃𝐄 𝐀𝐂𝐄𝐒𝐒𝐎 𝐍𝐀𝐎 𝐄 𝐏𝐄𝐑𝐌𝐈𝐓𝐈𝐃𝐎 𝐒𝐄𝐑𝐀 𝐁𝐋𝐎𝐐𝐔𝐄𝐀𝐃𝐎'))
+    print(Colorate.Horizontal(Colors.rainbow, f' ‌           𝐓𝐄𝐋𝐄𝐆𝐑𝐀𝐌: @{__OWNER_USERNAME__} - 𝐈𝐍𝐒𝐓𝐀𝐆𝐑𝐀𝐌 @{__IG_USERNAME__} - 𝐖𝐇𝐀𝐓𝐒𝐀𝐏𝐏 {__WHATS_OWNER__}'))
     print(Colorate.Horizontal(Colors.rainbow, '=================================================================='))
 
 def load_player_data(cpm):
@@ -59,21 +60,21 @@ def load_player_data(cpm):
         data = response.get('data')
         if 'floats' in data and 'localID' in data and 'money' in data and 'coin' in data:
         
-            print(Colorate.Horizontal(Colors.rainbow, '==========[ PLAYER DETAILS ]=========='))
+            print(Colorate.Horizontal(Colors.rainbow, '==========[ DETALHES DO JOGADOR ]=========='))
             
-            print(Colorate.Horizontal(Colors.rainbow, f'Name   : {(data.get("Name") if "Name" in data else "UNDEFINED")}.'))
+            print(Colorate.Horizontal(Colors.rainbow, f'NOME: {(data.get("Name") if "Name" in data else "INDEFINIDO")}.'))
                 
-            print(Colorate.Horizontal(Colors.rainbow, f'LocalID: {data.get("localID")}.'))
+            print(Colorate.Horizontal(Colors.rainbow, f'ID NO JOGO: {data.get("localID")}.'))
             
-            print(Colorate.Horizontal(Colors.rainbow, f'Money  : {data.get("money")}.'))
+            print(Colorate.Horizontal(Colors.rainbow, f'DINHEIRO: {data.get("money")}.'))
             
-            print(Colorate.Horizontal(Colors.rainbow, f'Coins  : {data.get("coin")}.'))
+            print(Colorate.Horizontal(Colors.rainbow, f'GOLDS: {data.get("coin")}.'))
             
         else:
-            print(Colorate.Horizontal(Colors.rainbow, '! ERROR: new accounts most be signed-in to the game at least once !.'))
+            print(Colorate.Horizontal(Colors.rainbow, '! ERROR: Novas Contas Devem Ser Registradas No Jogo Pelo Menos Uma Vez !.'))
             exit(1)
     else:
-        print(Colorate.Horizontal(Colors.rainbow, '! ERROR: seems like your login is not properly set !.'))
+        print(Colorate.Horizontal(Colors.rainbow, '! ERROR: Parece Que Seu Login Não Está Configurado Corretamente !.'))
         exit(1)
 
 
@@ -81,13 +82,13 @@ def load_key_data(cpm):
 
     data = cpm.get_key_data()
     
-    print(Colorate.Horizontal(Colors.rainbow, '========[ ACCESS KEY DETAILS ]========'))
+    print(Colorate.Horizontal(Colors.rainbow, '========[ DETALHES DA CHAVE DE ACESSO ]========'))
     
-    print(Colorate.Horizontal(Colors.rainbow, f'Access Key : {data.get("access_key")}.'))
+    print(Colorate.Horizontal(Colors.rainbow, f'CHAVE DE ACESSO: {data.get("access_key")}.'))
     
-    print(Colorate.Horizontal(Colors.rainbow, f'Telegram ID: {data.get("telegram_id")}.'))
+    print(Colorate.Horizontal(Colors.rainbow, f'TELEGRAM ID: {data.get("telegram_id")}.'))
     
-    print(Colorate.Horizontal(Colors.rainbow, f'Balance $  : {(data.get("coins") if not data.get("is_unlimited") else "Unlimited")}.'))
+    print(Colorate.Horizontal(Colors.rainbow, f' SEU SALDO $: {(data.get("coins") if not data.get("is_unlimited") else "Unlimited")}.'))
         
     
 
@@ -95,7 +96,7 @@ def prompt_valid_value(content, tag, password=False):
     while True:
         value = Prompt.ask(content, password=password)
         if not value or value.isspace():
-            print(Colorate.Horizontal(Colors.rainbow, f'{tag} cannot be empty or just spaces. Please try again.'))
+            print(Colorate.Horizontal(Colors.rainbow, f'{tag} Não Pode Estar Vazio Ou Apenas Espaços. Por Favor, Tente Novamente.'))
         else:
             return value
             
@@ -103,9 +104,9 @@ def load_client_details():
     response = requests.get("http://ip-api.com/json")
     data = response.json()
     print(Colorate.Horizontal(Colors.rainbow, '=============[ 𝐋𝐎𝐂𝐀𝐓𝐈𝐎𝐍 ]============='))
-    print(Colorate.Horizontal(Colors.rainbow, f'Ip Address : {data.get("query")}.'))
-    print(Colorate.Horizontal(Colors.rainbow, f'Location   : {data.get("city")} {data.get("regionName")} {data.get("countryCode")}.'))
-    print(Colorate.Horizontal(Colors.rainbow, f'Country    : {data.get("country")} {data.get("zip")}.'))
+    print(Colorate.Horizontal(Colors.rainbow, f'Endereço De IP: {data.get("query")}.'))
+    print(Colorate.Horizontal(Colors.rainbow, f'Localização: {data.get("city")} {data.get("regionName")} {data.get("countryCode")}.'))
+    print(Colorate.Horizontal(Colors.rainbow, f'País: {data.get("country")} {data.get("zip")}.'))
     print(Colorate.Horizontal(Colors.rainbow, '===============[ 𝐌𝐄𝐍𝐔 ]==============='))
 
 def interpolate_color(start_color, end_color, fraction):
@@ -130,32 +131,32 @@ if __name__ == "__main__":
     signal.signal(signal.SIGINT, signal_handler)
     while True:
         banner(console)
-        acc_email = prompt_valid_value("[bold][?] Account Email[/bold]", "Email", password=False)
-        acc_password = prompt_valid_value("[bold][?] Account Password[/bold]", "Password", password=False)
-        acc_access_key = prompt_valid_value("[bold][?] Access Key[/bold]", "Access Key", password=False)
-        console.print("[bold cyan][%] Trying to Login[/bold cyan]: ", end=None)
+        acc_email = prompt_valid_value("[bold][?] INSIRA SEU EMAIL:[/bold]", "Email", password=False)
+        acc_password = prompt_valid_value("[bold][?] INSIRA SUA SENHA:[/bold]", "Password", password=False)
+        acc_access_key = prompt_valid_value("[bold][?] INSIRA SUA CHAVE DE ACESSO:[/bold]", "Access Key", password=False)
+        console.print("[bold cyan][%] Tentando Fazer Login[/bold cyan]: ", end=None)
         cpm = CPMnoelcpm(acc_access_key)
         login_response = cpm.login(acc_email, acc_password)
         if login_response != 0:
             if login_response == 100:
-                print(Colorate.Horizontal(Colors.rainbow, 'ACCOUNT NOT FOUND.'))
+                print(Colorate.Horizontal(Colors.rainbow, 'CONTA NÃO ENCONTRADA.'))
                 sleep(2)
                 continue
             elif login_response == 101:
-                print(Colorate.Horizontal(Colors.rainbow, 'WRONG PASSWORD.'))
+                print(Colorate.Horizontal(Colors.rainbow, 'SENHA ERRADA.'))
                 sleep(2)
                 continue
             elif login_response == 103:
-                print(Colorate.Horizontal(Colors.rainbow, 'INVALID ACCESS KEY.'))
+                print(Colorate.Horizontal(Colors.rainbow, 'CHAVE DE ACESSO INVÁLIDA.'))
                 sleep(2)
                 continue
             else:
-                print(Colorate.Horizontal(Colors.rainbow, 'TRY AGAIN.'))
-                print(Colorate.Horizontal(Colors.rainbow, '! Note: make sure you filled out the fields !.'))
+                print(Colorate.Horizontal(Colors.rainbow, 'TENTE NOVAMENTE.'))
+                print(Colorate.Horizontal(Colors.rainbow, '! Nota: Certifique-se De Preencher Os Campos !.'))
                 sleep(2)
                 continue
         else:
-            print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL.'))
+            print(Colorate.Horizontal(Colors.rainbow, 'BEM-SUCEDIDO.'))
             sleep(2)
         while True:
             banner(console)
@@ -163,447 +164,447 @@ if __name__ == "__main__":
             load_key_data(cpm)
             load_client_details()
             choices = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26"]
-            print(Colorate.Horizontal(Colors.rainbow, '{01}: Increase Money           1.000K'))
-            print(Colorate.Horizontal(Colors.rainbow, '{02}: Increase Coins           3.500K'))
-            print(Colorate.Horizontal(Colors.rainbow, '{03}: King Rank                4.000K'))
-            print(Colorate.Horizontal(Colors.rainbow, '{04}: Change ID                3.500K'))
-            print(Colorate.Horizontal(Colors.rainbow, '{05}: Change Name              1.00'))
-            print(Colorate.Horizontal(Colors.rainbow, '{06}: Change Name (Rainbow)    1.00'))
-            print(Colorate.Horizontal(Colors.rainbow, '{07}: Number Plates            2.000K'))
-            print(Colorate.Horizontal(Colors.rainbow, '{08}: Account Delete           FREE'))
-            print(Colorate.Horizontal(Colors.rainbow, '{09}: Account Register         FREE'))
-            print(Colorate.Horizontal(Colors.rainbow, '{10}: Delete Friends           5.00'))
-            print(Colorate.Horizontal(Colors.rainbow, '{11}: Unlock Paid Cars         4.000K'))
-            print(Colorate.Horizontal(Colors.rainbow, '{12}: Unlock all Cars          3.000K'))
-            print(Colorate.Horizontal(Colors.rainbow, '{13}: Unlock all Cars Siren    2.000K'))
-            print(Colorate.Horizontal(Colors.rainbow, '{14}: Unlock w16 Engine        3.000K'))
-            print(Colorate.Horizontal(Colors.rainbow, '{15}: Unlock All Horns         3.000K'))
-            print(Colorate.Horizontal(Colors.rainbow, '{16}: Unlock Disable Damage    2.000K'))
-            print(Colorate.Horizontal(Colors.rainbow, '{17}: Unlock Unlimited Fuel    2.000K'))
-            print(Colorate.Horizontal(Colors.rainbow, '{18}: Unlock House 3           3.500K'))
-            print(Colorate.Horizontal(Colors.rainbow, '{19}: Unlock Smoke             2.000K'))
-            print(Colorate.Horizontal(Colors.rainbow, '{20}: Unlock Wheels            4.000K'))
-            print(Colorate.Horizontal(Colors.rainbow, '{21}: Unlock Animations        2.000K'))
-            print(Colorate.Horizontal(Colors.rainbow, '{22}: Unlock Equipaments M     3.000K'))
-            print(Colorate.Horizontal(Colors.rainbow, '{23}: Unlock Equipaments F     3.000K'))
-            print(Colorate.Horizontal(Colors.rainbow, '{24}: Change Race Wins         1.000K'))
-            print(Colorate.Horizontal(Colors.rainbow, '{25}: Change Race Loses        1.000K'))
-            print(Colorate.Horizontal(Colors.rainbow, '{26}: Clone Account            5.000K'))
-            print(Colorate.Horizontal(Colors.rainbow, '{0} : Exit'))
+            print(Colorate.Horizontal(Colors.rainbow, '{01}: Adicionar Dinheiro         1.000K'))
+            print(Colorate.Horizontal(Colors.rainbow, '{02}: Adicionar Moedas           3.500K'))
+            print(Colorate.Horizontal(Colors.rainbow, '{03}: Inserir Rank King          4.000K'))
+            print(Colorate.Horizontal(Colors.rainbow, '{04}: Mudar ID                 3.500K'))
+            print(Colorate.Horizontal(Colors.rainbow, '{05}: Mudar Nome               1.00'))
+            print(Colorate.Horizontal(Colors.rainbow, '{06}: Mudar Nome (Rainbow)     1.00'))
+            print(Colorate.Horizontal(Colors.rainbow, '{07}: Placas de Número         2.000K'))
+            print(Colorate.Horizontal(Colors.rainbow, '{08}: Deletar Conta            GRÁTIS'))
+            print(Colorate.Horizontal(Colors.rainbow, '{09}: Registrar Conta          GRÁTIS'))
+            print(Colorate.Horizontal(Colors.rainbow, '{10}: Deletar Amigos           5.00'))
+            print(Colorate.Horizontal(Colors.rainbow, '{11}: Desbloquear Carros Pagos 4.000K'))
+            print(Colorate.Horizontal(Colors.rainbow, '{12}: Desbloquear Todos os Carros 3.000K'))
+            print(Colorate.Horizontal(Colors.rainbow, '{13}: Desbloquear Sirene de Todos os Carros 2.000K'))
+            print(Colorate.Horizontal(Colors.rainbow, '{14}: Desbloquear Motor w16    3.000K'))
+            print(Colorate.Horizontal(Colors.rainbow, '{15}: Desbloquear Todas as Buzinas 3.000K'))
+            print(Colorate.Horizontal(Colors.rainbow, '{16}: Desbloquear Desabilitar Dano 2.000K'))
+            print(Colorate.Horizontal(Colors.rainbow, '{17}: Desbloquear Combustível Ilimitado 2.000K'))
+            print(Colorate.Horizontal(Colors.rainbow, '{18}: Desbloquear Casa 3       3.500K'))
+            print(Colorate.Horizontal(Colors.rainbow, '{19}: Desbloquear Fumaça      2.000K'))
+            print(Colorate.Horizontal(Colors.rainbow, '{20}: Desbloquear Rodas       4.000K'))
+            print(Colorate.Horizontal(Colors.rainbow, '{21}: Desbloquear Animações   2.000K'))
+            print(Colorate.Horizontal(Colors.rainbow, '{22}: Desbloquear Equipamentos M 3.000K'))
+            print(Colorate.Horizontal(Colors.rainbow, '{23}: Desbloquear Equipamentos F 3.000K'))
+            print(Colorate.Horizontal(Colors.rainbow, '{24}: Mudar Vitórias em Corridas 1.000K'))
+            print(Colorate.Horizontal(Colors.rainbow, '{25}: Mudar Derrotas em Corridas 1.000K'))
+            print(Colorate.Horizontal(Colors.rainbow, '{26}: Clonar Conta             5.000K'))
+            print(Colorate.Horizontal(Colors.rainbow, '{0} : Sair'))
             
             print(Colorate.Horizontal(Colors.rainbow, '===============[ 𝐂𝐏𝐌☆ ]==============='))
             
-            service = IntPrompt.ask(f"[bold][?] Select a Service [red][1-{choices[-1]} or 0][/red][/bold]", choices=choices, show_choices=False)
+            service = IntPrompt.ask(f"[bold][?] SELECIONE UM SERVICO [red][1-{choices[-1]} OU 0][/red][/bold]", choices=choices, show_choices=False)
             
             print(Colorate.Horizontal(Colors.rainbow, '===============[ 𝐂𝐏𝐌☆ ]==============='))
             
             if service == 0: # Exit
-                print(Colorate.Horizontal(Colors.rainbow, f'Thank You for using our tool, please join our telegram channel: @{__CHANNEL_USERNAME__}.'))
+                print(Colorate.Horizontal(Colors.rainbow, f'Obrigado Por Usar Nossa Ferramenta, Junte-se Ao Nosso Instagram: @{__IG_USERNAME__}.'))
             elif service == 1: # Increase Money
-                print(Colorate.Horizontal(Colors.rainbow, '[?] Insert how much money do you want.'))
-                amount = IntPrompt.ask("[?] Amount")
-                console.print("[%] Saving your data: ", end=None)
+                print(Colorate.Horizontal(Colors.rainbow, '[?] Insira quanto de dinheiro você quer adicionar.'))
+                amount = IntPrompt.ask("[?] Quantidade: ")
+                console.print("[%] Salvando seus dados: ", end=None)
                 if amount > 0 and amount <= 999999999:
                     if cpm.set_player_money(amount):
-                        print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
+                        print(Colorate.Horizontal(Colors.rainbow, 'BEM-SUCEDIDO'))
                         print(Colorate.Horizontal(Colors.rainbow, '======================================'))
-                        answ = Prompt.ask("[?] Do You want to Exit ?", choices=["y", "n"], default="n")
-                        if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'Thank You for using our tool, please join our telegram channe: @{__CHANNEL_USERNAME__}.'))
+                        answ = Prompt.ask("[?] DESEJA SAIR ? USE Y PARA SIM E N PARA NAO", choices=["y", "n"], default="n")
+                        if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'Obrigado Por Usar Nossa Ferramenta, Junte-se Ao Nosso Instagram: @{__IG_USERNAME__}.'))
                         else: continue
                     else:
-                        print(Colorate.Horizontal(Colors.rainbow, 'FAILED.'))
-                        print(Colorate.Horizontal(Colors.rainbow, 'Please try again.'))
+                        print(Colorate.Horizontal(Colors.rainbow, 'FALHOU.'))
+                        print(Colorate.Horizontal(Colors.rainbow, 'Por favor, tente novamente.'))
                         sleep(2)
                         continue
                 else:
-                    print(Colorate.Horizontal(Colors.rainbow, 'FAILED.'))
-                    print(Colorate.Horizontal(Colors.rainbow, 'Please use valid values.'))
+                    print(Colorate.Horizontal(Colors.rainbow, 'FALHOU.'))
+                    print(Colorate.Horizontal(Colors.rainbow, 'Por favor, use valores válidos.'))
                     sleep(2)
                     continue
             elif service == 2: # Increase Coins
-                print(Colorate.Horizontal(Colors.rainbow, '[?] Insert how much coins do you want.'))
-                amount = IntPrompt.ask("[?] Amount")
-                console.print("[%] Saving your data: ", end=None)
+                print(Colorate.Horizontal(Colors.rainbow, '[?] Insira quantas moedas você deseja adicionar.'))
+                amount = IntPrompt.ask("[?] Quantidade: ")
+                console.print("[%] Salvando seus dados: ", end=None)
                 if amount > 0 and amount <= 999999999:
                     if cpm.set_player_coins(amount):
-                        print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
+                        print(Colorate.Horizontal(Colors.rainbow, 'BEM-SUCEDIDO'))
                         print(Colorate.Horizontal(Colors.rainbow, '======================================'))
-                        answ = Prompt.ask("[?] Do You want to Exit ?", choices=["y", "n"], default="n")
-                        if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'Thank You for using our tool, please join our telegram channe: @{__CHANNEL_USERNAME__}.'))
+                        answ = Prompt.ask("[?] DESEJA SAIR ? USE Y PARA SIM E N PARA NAO", choices=["y", "n"], default="n")
+                        if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'Obrigado Por Usar Nossa Ferramenta, Junte-se Ao Nosso Instagram: @{__IG_USERNAME__}.'))
                         else: continue
                     else:
-                        print(Colorate.Horizontal(Colors.rainbow, 'FAILED.'))
-                        print(Colorate.Horizontal(Colors.rainbow, 'Please try again.'))
+                        print(Colorate.Horizontal(Colors.rainbow, 'FALHOU.'))
+                        print(Colorate.Horizontal(Colors.rainbow, 'Por favor, tente novamente.'))
                         sleep(2)
                         continue
                 else:
-                    print(Colorate.Horizontal(Colors.rainbow, 'FAILED.'))
-                    print(Colorate.Horizontal(Colors.rainbow, 'Please use valid values.'))
+                    print(Colorate.Horizontal(Colors.rainbow, 'FALHOU.'))
+                    print(Colorate.Horizontal(Colors.rainbow, 'Por favor, use valores válidos.'))
                     sleep(2)
                     continue
             elif service == 3: # King Rank
-                console.print("[bold red][!] Note:[/bold red]: if the king rank doesn't appear in game, close it and open few times.", end=None)
-                console.print("[bold red][!] Note:[/bold red]: please don't do King Rank on same account twice.", end=None)
+                console.print("[bold red][!] Observação:[/bold red]: se a classificação do rei não aparecer no jogo, feche-a e abra-a algumas vezes.", end=None)
+                console.print("[bold red][!] Observação:[/bold red]: por favor não faça King Rank na mesma conta duas vezes.", end=None)
                 sleep(2)
-                console.print("[%] Giving you a King Rank: ", end=None)
+                console.print("[%] Dando a você uma classificação de rei: ", end=None)
                 if cpm.set_player_rank():
-                    print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
+                    print(Colorate.Horizontal(Colors.rainbow, 'BEM-SUCEDIDO'))
                     print(Colorate.Horizontal(Colors.rainbow, '======================================'))
-                    answ = Prompt.ask("[?] Do You want to Exit ?", choices=["y", "n"], default="n")
-                    if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'Thank You for using our tool, please join our telegram channe: @{__CHANNEL_USERNAME__}.'))
+                    answ = Prompt.ask("[?] DESEJA SAIR ? USE Y PARA SIM E N PARA NAO", choices=["y", "n"], default="n")
+                    if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'Obrigado Por Usar Nossa Ferramenta, Junte-se Ao Nosso Instagram: @{__IG_USERNAME__}.'))
                     else: continue
                 else:
-                    print(Colorate.Horizontal(Colors.rainbow, 'FAILED.'))
-                    print(Colorate.Horizontal(Colors.rainbow, 'Please try again.'))
+                    print(Colorate.Horizontal(Colors.rainbow, 'FALHOU.'))
+                    print(Colorate.Horizontal(Colors.rainbow, 'Por favor, tente novamente.'))
                     sleep(2)
                     continue
             elif service == 4: # Change ID
-                print(Colorate.Horizontal(Colors.rainbow, '[?] Enter your new ID.'))
-                new_id = Prompt.ask("[?] ID")
-                console.print("[%] Saving your data: ", end=None)
+                print(Colorate.Horizontal(Colors.rainbow, '[?] Insira seu novo ID.'))
+                new_id = Prompt.ask("[?] ID: ")
+                console.print("[%] Salvando seus dados: ", end=None)
                 if len(new_id) >= 0 and len(new_id) <= 999999999 and (' ' in new_id) == False:
                     if cpm.set_player_localid(new_id.upper()):
-                        print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
+                        print(Colorate.Horizontal(Colors.rainbow, 'BEM-SUCEDIDO'))
                         print(Colorate.Horizontal(Colors.rainbow, '======================================'))
-                        answ = Prompt.ask("[?] Do You want to Exit ?", choices=["y", "n"], default="n")
-                        if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'Thank You for using our tool, please join our telegram channe: @{__CHANNEL_USERNAME__}.'))
+                        answ = Prompt.ask("[?] DESEJA SAIR ? USE Y PARA SIM E N PARA NAO", choices=["y", "n"], default="n")
+                        if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'Obrigado Por Usar Nossa Ferramenta, Junte-se Ao Nosso Instagram: @{__IG_USERNAME__}.'))
                         else: continue
                     else:
-                        print(Colorate.Horizontal(Colors.rainbow, 'FAILED.'))
-                        print(Colorate.Horizontal(Colors.rainbow, 'Please try again.'))
+                        print(Colorate.Horizontal(Colors.rainbow, 'FALHOU.'))
+                        print(Colorate.Horizontal(Colors.rainbow, 'Por favor, tente novamente.'))
                         sleep(2)
                         continue
                 else:
-                    print(Colorate.Horizontal(Colors.rainbow, 'FAILED.'))
+                    print(Colorate.Horizontal(Colors.rainbow, 'FALHOU.'))
                     print(Colorate.Horizontal(Colors.rainbow, 'Please use valid ID.'))
                     sleep(2)
                     continue
             elif service == 5: # Change Name
-                print(Colorate.Horizontal(Colors.rainbow, '[?] Enter your new Name.'))
-                new_name = Prompt.ask("[?] Name")
-                console.print("[%] Saving your data: ", end=None)
+                print(Colorate.Horizontal(Colors.rainbow, '[?] Digite seu novo nome.'))
+                new_name = Prompt.ask("[?] Nome: ")
+                console.print("[%] Salvando seus dados: ", end=None)
                 if len(new_name) >= 0 and len(new_name) <= 999999999:
                     if cpm.set_player_name(new_name):
-                        print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
+                        print(Colorate.Horizontal(Colors.rainbow, 'BEM-SUCEDIDO'))
                         print(Colorate.Horizontal(Colors.rainbow, '======================================'))
-                        answ = Prompt.ask("[?] Do You want to Exit ?", choices=["y", "n"], default="n")
-                        if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'Thank You for using our tool, please join our telegram channe: @{__CHANNEL_USERNAME__}.'))
+                        answ = Prompt.ask("[?] DESEJA SAIR ? USE Y PARA SIM E N PARA NAO", choices=["y", "n"], default="n")
+                        if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'Obrigado Por Usar Nossa Ferramenta, Junte-se Ao Nosso Instagram: @{__IG_USERNAME__}.'))
                         else: continue
                     else:
-                        print(Colorate.Horizontal(Colors.rainbow, 'FAILED.'))
-                        print(Colorate.Horizontal(Colors.rainbow, 'Please try again.'))
+                        print(Colorate.Horizontal(Colors.rainbow, 'FALHOU.'))
+                        print(Colorate.Horizontal(Colors.rainbow, 'Por favor, tente novamente.'))
                         sleep(2)
                         continue
                 else:
-                    print(Colorate.Horizontal(Colors.rainbow, 'FAILED.'))
-                    print(Colorate.Horizontal(Colors.rainbow, 'Please use valid values.'))
+                    print(Colorate.Horizontal(Colors.rainbow, 'FALHOU.'))
+                    print(Colorate.Horizontal(Colors.rainbow, 'Por favor, use valores válidos.'))
                     sleep(2)
                     continue
             elif service == 6: # Change Name Rainbow
-                print(Colorate.Horizontal(Colors.rainbow, '[?] Enter your new Rainbow Name.'))
-                new_name = Prompt.ask("[?] Name")
-                console.print("[%] Saving your data: ", end=None)
+                print(Colorate.Horizontal(Colors.rainbow, '[?] Digite seu novo nome colorido.'))
+                new_name = Prompt.ask("[?] Nome: ")
+                console.print("[%] Salvando seus dados: ", end=None)
                 if len(new_name) >= 0 and len(new_name) <= 999999999:
                     if cpm.set_player_name(rainbow_gradient_string(new_name)):
-                        print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
+                        print(Colorate.Horizontal(Colors.rainbow, 'BEM-SUCEDIDO'))
                         print(Colorate.Horizontal(Colors.rainbow, '======================================'))
-                        answ = Prompt.ask("[?] Do You want to Exit ?", choices=["y", "n"], default="n")
-                        if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'Thank You for using our tool, please join our telegram channe: @{__CHANNEL_USERNAME__}.'))
+                        answ = Prompt.ask("[?] DESEJA SAIR ? USE Y PARA SIM E N PARA NAO", choices=["y", "n"], default="n")
+                        if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'Obrigado Por Usar Nossa Ferramenta, Junte-se Ao Nosso Instagram: @{__IG_USERNAME__}.'))
                         else: continue
                     else:
-                        print(Colorate.Horizontal(Colors.rainbow, 'FAILED.'))
-                        print(Colorate.Horizontal(Colors.rainbow, 'Please try again.'))
+                        print(Colorate.Horizontal(Colors.rainbow, 'FALHOU.'))
+                        print(Colorate.Horizontal(Colors.rainbow, 'Por favor, tente novamente.'))
                         sleep(2)
                         continue
                 else:
-                    print(Colorate.Horizontal(Colors.rainbow, 'FAILED.'))
-                    print(Colorate.Horizontal(Colors.rainbow, 'Please use valid values.'))
+                    print(Colorate.Horizontal(Colors.rainbow, 'FALHOU.'))
+                    print(Colorate.Horizontal(Colors.rainbow, 'Por favor, use valores válidos.'))
                     sleep(2)
                     continue
             elif service == 7: # Number Plates
-                console.print("[%] Giving you a Number Plates: ", end=None)
+                console.print("[%] Dando a você uma placa de carro: ", end=None)
                 if cpm.set_player_plates():
-                    print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
+                    print(Colorate.Horizontal(Colors.rainbow, 'BEM-SUCEDIDO'))
                     print(Colorate.Horizontal(Colors.rainbow, '======================================'))
-                    answ = Prompt.ask("[?] Do You want to Exit ?", choices=["y", "n"], default="n")
-                    if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'Thank You for using our tool, please join our telegram channe: @{__CHANNEL_USERNAME__}.'))
+                    answ = Prompt.ask("[?] DESEJA SAIR ? USE Y PARA SIM E N PARA NAO", choices=["y", "n"], default="n")
+                    if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'Obrigado Por Usar Nossa Ferramenta, Junte-se Ao Nosso Instagram: @{__IG_USERNAME__}.'))
                     else: continue
                 else:
-                    print(Colorate.Horizontal(Colors.rainbow, 'FAILED.'))
-                    print(Colorate.Horizontal(Colors.rainbow, 'Please try again.'))
+                    print(Colorate.Horizontal(Colors.rainbow, 'FALHOU.'))
+                    print(Colorate.Horizontal(Colors.rainbow, 'Por favor, tente novamente.'))
                     sleep(2)
                     continue
             elif service == 8: # Account Delete
-                print(Colorate.Horizontal(Colors.rainbow, '[!] After deleting your account there is no going back !!.'))
-                answ = Prompt.ask("[?] Do You want to Delete this Account ?!", choices=["y", "n"], default="n")
+                print(Colorate.Horizontal(Colors.rainbow, '[!] Depois de excluir sua conta não há como voltar atrás !!.'))
+                answ = Prompt.ask("[?] Você quer excluir esta conta? USE Y PARA CONTINUAR", choices=["y", "n"], default="n")
                 if answ == "y":
                     cpm.delete()
-                    print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
+                    print(Colorate.Horizontal(Colors.rainbow, 'BEM-SUCEDIDO'))
                     print(Colorate.Horizontal(Colors.rainbow, '======================================'))
-                    print(Colorate.Horizontal(Colors.rainbow, f'Thank You for using our tool, please join our telegram channe: @{__CHANNEL_USERNAME__}.'))
+                    print(Colorate.Horizontal(Colors.rainbow, f'Obrigado Por Usar Nossa Ferramenta, Junte-se Ao Nosso Instagram: @{__IG_USERNAME__}.'))
                 else: continue
             elif service == 9: # Account Register
-                print(Colorate.Horizontal(Colors.rainbow, '[!] Registring new Account.'))
-                acc2_email = prompt_valid_value("[?] Account Email", "Email", password=False)
-                acc2_password = prompt_valid_value("[?] Account Password", "Password", password=False)
-                console.print("[%] Creating new Account: ", end=None)
+                print(Colorate.Horizontal(Colors.rainbow, '[!] Registrando nova conta.'))
+                acc2_email = prompt_valid_value("[?] INSIRA O EMAIL DA NOVA CONTA:", "Email", password=False)
+                acc2_password = prompt_valid_value("[?] INSIRA A SENHA DA NOVA CONTA:", "Password", password=False)
+                console.print("[%] Criando nova conta: ", end=None)
                 status = cpm.register(acc2_email, acc2_password)
                 if status == 0:
-                    print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
+                    print(Colorate.Horizontal(Colors.rainbow, 'BEM-SUCEDIDO'))
                     print(Colorate.Horizontal(Colors.rainbow, '======================================'))
-                    print(Colorate.Horizontal(Colors.rainbow, f'INFO: In order to tweak this account with NOELCPM.'))
-                    print(Colorate.Horizontal(Colors.rainbow, 'you most sign-in to the game using this account.'))
+                    print(Colorate.Horizontal(Colors.rainbow, f'INFO: Para ajustar esta conta com a ferramenta.'))
+                    print(Colorate.Horizontal(Colors.rainbow, 'você deve entrar no jogo usando esta conta.'))
                     sleep(2)
                     continue
                 elif status == 105:
-                    print(Colorate.Horizontal(Colors.rainbow, 'FAILED.'))
-                    print(Colorate.Horizontal(Colors.rainbow, 'This email is already exists !.'))
+                    print(Colorate.Horizontal(Colors.rainbow, 'FALHOU.'))
+                    print(Colorate.Horizontal(Colors.rainbow, 'Este e-mail já existe !.'))
                     sleep(2)
                     continue
                 else:
-                    print(Colorate.Horizontal(Colors.rainbow, 'FAILED.'))
-                    print(Colorate.Horizontal(Colors.rainbow, 'Please try again.'))
+                    print(Colorate.Horizontal(Colors.rainbow, 'FALHOU.'))
+                    print(Colorate.Horizontal(Colors.rainbow, 'Por favor, tente novamente.'))
                     sleep(2)
                     continue
             elif service == 10: # Delete Friends
-                console.print("[%] Deleting your Friends: ", end=None)
+                console.print("[%] Excluindo seus amigos: ", end=None)
                 if cpm.delete_player_friends():
-                    print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
+                    print(Colorate.Horizontal(Colors.rainbow, 'BEM-SUCEDIDO'))
                     print(Colorate.Horizontal(Colors.rainbow, '======================================'))
-                    answ = Prompt.ask("[?] Do You want to Exit ?", choices=["y", "n"], default="n")
-                    if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'Thank You for using our tool, please join our telegram channe: @{__CHANNEL_USERNAME__}.'))
+                    answ = Prompt.ask("[?] DESEJA SAIR ? USE Y PARA SIM E N PARA NAO", choices=["y", "n"], default="n")
+                    if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'Obrigado Por Usar Nossa Ferramenta, Junte-se Ao Nosso Instagram: @{__IG_USERNAME__}.'))
                     else: continue
                 else:
-                    print(Colorate.Horizontal(Colors.rainbow, 'FAILED.'))
-                    print(Colorate.Horizontal(Colors.rainbow, 'Please try again.'))
+                    print(Colorate.Horizontal(Colors.rainbow, 'FALHOU.'))
+                    print(Colorate.Horizontal(Colors.rainbow, 'Por favor, tente novamente.'))
                     sleep(2)
                     continue
             elif service == 11: # Unlock All Paid Cars
-                console.print("[!] Note: this function takes a while to complete, please don't cancel.", end=None)
-                console.print("[%] Unlocking All Paid Cars: ", end=None)
+                console.print("[!] Nota: esta função demora um pouco para ser concluída, não cancele.", end=None)
+                console.print("[%] Desbloqueando todos os carros pagos: ", end=None)
                 if cpm.unlock_paid_cars():
-                    print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
+                    print(Colorate.Horizontal(Colors.rainbow, 'BEM-SUCEDIDO'))
                     print(Colorate.Horizontal(Colors.rainbow, '======================================'))
-                    answ = Prompt.ask("[?] Do You want to Exit ?", choices=["y", "n"], default="n")
-                    if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'Thank You for using our tool, please join our telegram channe: @{__CHANNEL_USERNAME__}.'))
+                    answ = Prompt.ask("[?] DESEJA SAIR ? USE Y PARA SIM E N PARA NAO", choices=["y", "n"], default="n")
+                    if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'Obrigado Por Usar Nossa Ferramenta, Junte-se Ao Nosso Instagram: @{__IG_USERNAME__}.'))
                     else: continue
                 else:
-                    print(Colorate.Horizontal(Colors.rainbow, 'FAILED.'))
-                    print(Colorate.Horizontal(Colors.rainbow, 'Please try again.'))
+                    print(Colorate.Horizontal(Colors.rainbow, 'FALHOU.'))
+                    print(Colorate.Horizontal(Colors.rainbow, 'Por favor, tente novamente.'))
                     sleep(2)
                     continue
             elif service == 12: # Unlock All Cars
-                console.print("[%] Unlocking All Cars: ", end=None)
+                console.print("[%] Desbloqueando todos os carros: ", end=None)
                 if cpm.unlock_all_cars():
-                    print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
+                    print(Colorate.Horizontal(Colors.rainbow, 'BEM-SUCEDIDO'))
                     print(Colorate.Horizontal(Colors.rainbow, '======================================'))
-                    answ = Prompt.ask("[?] Do You want to Exit ?", choices=["y", "n"], default="n")
-                    if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'Thank You for using our tool, please join our telegram channe: @{__CHANNEL_USERNAME__}.'))
+                    answ = Prompt.ask("[?] DESEJA SAIR ? USE Y PARA SIM E N PARA NAO", choices=["y", "n"], default="n")
+                    if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'Obrigado Por Usar Nossa Ferramenta, Junte-se Ao Nosso Instagram: @{__IG_USERNAME__}.'))
                     else: continue
                 else:
-                    print(Colorate.Horizontal(Colors.rainbow, 'FAILED.'))
-                    print(Colorate.Horizontal(Colors.rainbow, 'Please try again.'))
+                    print(Colorate.Horizontal(Colors.rainbow, 'FALHOU.'))
+                    print(Colorate.Horizontal(Colors.rainbow, 'Por favor, tente novamente.'))
                     sleep(2)
                     continue
             elif service == 13: # Unlock All Cars Siren
-                console.print("[%] Unlocking All Cars Siren: ", end=None)
+                console.print("[%] Desbloqueando a sirene de todos os carros: ", end=None)
                 if cpm.unlock_all_cars_siren():
-                    print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
+                    print(Colorate.Horizontal(Colors.rainbow, 'BEM-SUCEDIDO'))
                     print(Colorate.Horizontal(Colors.rainbow, '======================================'))
-                    answ = Prompt.ask("[?] Do You want to Exit ?", choices=["y", "n"], default="n")
-                    if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'Thank You for using our tool, please join our telegram channe: @{__CHANNEL_USERNAME__}.'))
+                    answ = Prompt.ask("[?] DESEJA SAIR ? USE Y PARA SIM E N PARA NAO", choices=["y", "n"], default="n")
+                    if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'Obrigado Por Usar Nossa Ferramenta, Junte-se Ao Nosso Instagram: @{__IG_USERNAME__}.'))
                     else: continue
                 else:
-                    print(Colorate.Horizontal(Colors.rainbow, 'FAILED.'))
-                    print(Colorate.Horizontal(Colors.rainbow, 'Please try again.'))
+                    print(Colorate.Horizontal(Colors.rainbow, 'FALHOU.'))
+                    print(Colorate.Horizontal(Colors.rainbow, 'Por favor, tente novamente.'))
                     sleep(2)
                     continue
             elif service == 14: # Unlock w16 Engine
-                console.print("[%] Unlocking w16 Engine: ", end=None)
+                console.print("[%] Desbloqueando o motor w16: ", end=None)
                 if cpm.unlock_w16():
-                    print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
+                    print(Colorate.Horizontal(Colors.rainbow, 'BEM-SUCEDIDO'))
                     print(Colorate.Horizontal(Colors.rainbow, '======================================'))
-                    answ = Prompt.ask("[?] Do You want to Exit ?", choices=["y", "n"], default="n")
-                    if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'Thank You for using our tool, please join our telegram channe: @{__CHANNEL_USERNAME__}.'))
+                    answ = Prompt.ask("[?] DESEJA SAIR ? USE Y PARA SIM E N PARA NAO", choices=["y", "n"], default="n")
+                    if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'Obrigado Por Usar Nossa Ferramenta, Junte-se Ao Nosso Instagram: @{__IG_USERNAME__}.'))
                     else: continue
                 else:
-                    print(Colorate.Horizontal(Colors.rainbow, 'FAILED.'))
-                    print(Colorate.Horizontal(Colors.rainbow, 'Please try again.'))
+                    print(Colorate.Horizontal(Colors.rainbow, 'FALHOU.'))
+                    print(Colorate.Horizontal(Colors.rainbow, 'Por favor, tente novamente.'))
                     sleep(2)
                     continue
             elif service == 15: # Unlock All Horns
-                console.print("[%] Unlocking All Horns: ", end=None)
+                console.print("[%] Desbloqueando todas as Buzinas: ", end=None)
                 if cpm.unlock_horns():
-                    print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
+                    print(Colorate.Horizontal(Colors.rainbow, 'BEM-SUCEDIDO'))
                     print(Colorate.Horizontal(Colors.rainbow, '======================================'))
-                    answ = Prompt.ask("[?] Do You want to Exit ?", choices=["y", "n"], default="n")
-                    if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'Thank You for using our tool, please join our telegram channe: @{__CHANNEL_USERNAME__}.'))
+                    answ = Prompt.ask("[?] DESEJA SAIR ? USE Y PARA SIM E N PARA NAO", choices=["y", "n"], default="n")
+                    if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'Obrigado Por Usar Nossa Ferramenta, Junte-se Ao Nosso Instagram: @{__IG_USERNAME__}.'))
                     else: continue
                 else:
-                    print(Colorate.Horizontal(Colors.rainbow, 'FAILED.'))
-                    print(Colorate.Horizontal(Colors.rainbow, 'Please try again.'))
+                    print(Colorate.Horizontal(Colors.rainbow, 'FALHOU.'))
+                    print(Colorate.Horizontal(Colors.rainbow, 'Por favor, tente novamente.'))
                     sleep(2)
                     continue
             elif service == 16: # Disable Engine Damage
-                console.print("[%] Unlocking Disable Damage: ", end=None)
+                console.print("[%] Desbloqueando Desabilitar Dano: ", end=None)
                 if cpm.disable_engine_damage():
-                    print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
+                    print(Colorate.Horizontal(Colors.rainbow, 'BEM-SUCEDIDO'))
                     print(Colorate.Horizontal(Colors.rainbow, '======================================'))
-                    answ = Prompt.ask("[?] Do You want to Exit ?", choices=["y", "n"], default="n")
-                    if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'Thank You for using our tool, please join our telegram channe: @{__CHANNEL_USERNAME__}.'))
+                    answ = Prompt.ask("[?] DESEJA SAIR ? USE Y PARA SIM E N PARA NAO", choices=["y", "n"], default="n")
+                    if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'Obrigado Por Usar Nossa Ferramenta, Junte-se Ao Nosso Instagram: @{__IG_USERNAME__}.'))
                     else: continue
                 else:
-                    print(Colorate.Horizontal(Colors.rainbow, 'FAILED.'))
-                    print(Colorate.Horizontal(Colors.rainbow, 'Please try again.'))
+                    print(Colorate.Horizontal(Colors.rainbow, 'FALHOU.'))
+                    print(Colorate.Horizontal(Colors.rainbow, 'Por favor, tente novamente.'))
                     sleep(2)
                     continue
             elif service == 17: # Unlimited Fuel
-                console.print("[%] Unlocking Unlimited Fuel: ", end=None)
+                console.print("[%] Desbloqueando combustível ilimitado: ", end=None)
                 if cpm.unlimited_fuel():
-                    print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
+                    print(Colorate.Horizontal(Colors.rainbow, 'BEM-SUCEDIDO'))
                     print(Colorate.Horizontal(Colors.rainbow, '======================================'))
-                    answ = Prompt.ask("[?] Do You want to Exit ?", choices=["y", "n"], default="n")
-                    if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'Thank You for using our tool, please join our telegram channe: @{__CHANNEL_USERNAME__}.'))
+                    answ = Prompt.ask("[?] DESEJA SAIR ? USE Y PARA SIM E N PARA NAO", choices=["y", "n"], default="n")
+                    if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'Obrigado Por Usar Nossa Ferramenta, Junte-se Ao Nosso Instagram: @{__IG_USERNAME__}.'))
                     else: continue
                 else:
-                    print(Colorate.Horizontal(Colors.rainbow, 'FAILED.'))
-                    print(Colorate.Horizontal(Colors.rainbow, 'Please try again.'))
+                    print(Colorate.Horizontal(Colors.rainbow, 'FALHOU.'))
+                    print(Colorate.Horizontal(Colors.rainbow, 'Por favor, tente novamente.'))
                     sleep(2)
                     continue
             elif service == 18: # Unlock House 3
-                console.print("[%] Unlocking House 3: ", end=None)
+                console.print("[%] Desbloqueando a Casa 3: ", end=None)
                 if cpm.unlock_houses():
-                    print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
+                    print(Colorate.Horizontal(Colors.rainbow, 'BEM-SUCEDIDO'))
                     print(Colorate.Horizontal(Colors.rainbow, '======================================'))
-                    answ = Prompt.ask("[?] Do You want to Exit ?", choices=["y", "n"], default="n")
-                    if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'Thank You for using our tool, please join our telegram channe: @{__CHANNEL_USERNAME__}.'))
+                    answ = Prompt.ask("[?] DESEJA SAIR ? USE Y PARA SIM E N PARA NAO", choices=["y", "n"], default="n")
+                    if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'Obrigado Por Usar Nossa Ferramenta, Junte-se Ao Nosso Instagram: @{__IG_USERNAME__}.'))
                     else: continue
                 else:
-                    print(Colorate.Horizontal(Colors.rainbow, 'FAILED.'))
-                    print(Colorate.Horizontal(Colors.rainbow, 'Please try again.'))
+                    print(Colorate.Horizontal(Colors.rainbow, 'FALHOU.'))
+                    print(Colorate.Horizontal(Colors.rainbow, 'Por favor, tente novamente.'))
                     sleep(2)
                     continue
             elif service == 19: # Unlock Smoke
-                console.print("[%] Unlocking Smoke: ", end=None)
+                console.print("[%] Desbloqueando a fumaça: ", end=None)
                 if cpm.unlock_smoke():
-                    print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
+                    print(Colorate.Horizontal(Colors.rainbow, 'BEM-SUCEDIDO'))
                     print(Colorate.Horizontal(Colors.rainbow, '======================================'))
-                    answ = Prompt.ask("[?] Do You want to Exit ?", choices=["y", "n"], default="n")
-                    if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'Thank You for using our tool, please join our telegram channe: @{__CHANNEL_USERNAME__}.'))
+                    answ = Prompt.ask("[?] DESEJA SAIR ? USE Y PARA SIM E N PARA NAO", choices=["y", "n"], default="n")
+                    if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'Obrigado Por Usar Nossa Ferramenta, Junte-se Ao Nosso Instagram: @{__IG_USERNAME__}.'))
                     else: continue
                 else:
-                    print(Colorate.Horizontal(Colors.rainbow, 'FAILED.'))
-                    print(Colorate.Horizontal(Colors.rainbow, 'Please try again.'))
+                    print(Colorate.Horizontal(Colors.rainbow, 'FALHOU.'))
+                    print(Colorate.Horizontal(Colors.rainbow, 'Por favor, tente novamente.'))
                     sleep(2)
                     continue
             elif service == 20: # Unlock Smoke
-                console.print("[%] Unlocking Wheels: ", end=None)
+                console.print("[%] Desbloqueando rodas: ", end=None)
                 if cpm.unlock_wheels():
-                    print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
+                    print(Colorate.Horizontal(Colors.rainbow, 'BEM-SUCEDIDO'))
                     print(Colorate.Horizontal(Colors.rainbow, '======================================'))
-                    answ = Prompt.ask("[?] Do You want to Exit ?", choices=["y", "n"], default="n")
-                    if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'Thank You for using our tool, please join our telegram channe: @{__CHANNEL_USERNAME__}.'))
+                    answ = Prompt.ask("[?] DESEJA SAIR ? USE Y PARA SIM E N PARA NAO", choices=["y", "n"], default="n")
+                    if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'Obrigado Por Usar Nossa Ferramenta, Junte-se Ao Nosso Instagram: @{__IG_USERNAME__}.'))
                     else: continue
                 else:
-                    print(Colorate.Horizontal(Colors.rainbow, 'FAILED.'))
-                    print(Colorate.Horizontal(Colors.rainbow, 'Please try again.'))
+                    print(Colorate.Horizontal(Colors.rainbow, 'FALHOU.'))
+                    print(Colorate.Horizontal(Colors.rainbow, 'Por favor, tente novamente.'))
                     sleep(2)
                     continue
             elif service == 21: # Unlock Smoke
-                console.print("[%] Unlocking Animations: ", end=None)
+                console.print("[%] Desbloqueando animações: ", end=None)
                 if cpm.unlock_animations():
-                    print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
+                    print(Colorate.Horizontal(Colors.rainbow, 'BEM-SUCEDIDO'))
                     print(Colorate.Horizontal(Colors.rainbow, '======================================'))
-                    answ = Prompt.ask("[?] Do You want to Exit ?", choices=["y", "n"], default="n")
-                    if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'Thank You for using our tool, please join our telegram channe: @{__CHANNEL_USERNAME__}.'))
+                    answ = Prompt.ask("[?] DESEJA SAIR ? USE Y PARA SIM E N PARA NAO", choices=["y", "n"], default="n")
+                    if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'Obrigado Por Usar Nossa Ferramenta, Junte-se Ao Nosso Instagram: @{__IG_USERNAME__}.'))
                     else: continue
                 else:
-                    print(Colorate.Horizontal(Colors.rainbow, 'FAILED.'))
-                    print(Colorate.Horizontal(Colors.rainbow, 'Please try again.'))
+                    print(Colorate.Horizontal(Colors.rainbow, 'FALHOU.'))
+                    print(Colorate.Horizontal(Colors.rainbow, 'Por favor, tente novamente.'))
                     sleep(2)
                     continue
             elif service == 22: # Unlock Smoke
-                console.print("[%] Unlocking Equipaments Male: ", end=None)
+                console.print("[%] Desbloqueando Equipamento Masculino: ", end=None)
                 if cpm.unlock_equipments_male():
-                    print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
+                    print(Colorate.Horizontal(Colors.rainbow, 'BEM-SUCEDIDO'))
                     print(Colorate.Horizontal(Colors.rainbow, '======================================'))
-                    answ = Prompt.ask("[?] Do You want to Exit ?", choices=["y", "n"], default="n")
-                    if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'Thank You for using our tool, please join our telegram channe: @{__CHANNEL_USERNAME__}.'))
+                    answ = Prompt.ask("[?] DESEJA SAIR ? USE Y PARA SIM E N PARA NAO", choices=["y", "n"], default="n")
+                    if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'Obrigado Por Usar Nossa Ferramenta, Junte-se Ao Nosso Instagram: @{__IG_USERNAME__}.'))
                     else: continue
                 else:
-                    print(Colorate.Horizontal(Colors.rainbow, 'FAILED.'))
-                    print(Colorate.Horizontal(Colors.rainbow, 'Please try again.'))
+                    print(Colorate.Horizontal(Colors.rainbow, 'FALHOU.'))
+                    print(Colorate.Horizontal(Colors.rainbow, 'Por favor, tente novamente.'))
                     sleep(2)
                     continue
             elif service == 23: # Unlock Smoke
-                console.print("[%] Unlocking Equipaments Female: ", end=None)
+                console.print("[%] Desbloqueando equipamentos femininos: ", end=None)
                 if cpm.unlock_equipments_female():
-                    print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
+                    print(Colorate.Horizontal(Colors.rainbow, 'BEM-SUCEDIDO'))
                     print(Colorate.Horizontal(Colors.rainbow, '======================================'))
-                    answ = Prompt.ask("[?] Do You want to Exit ?", choices=["y", "n"], default="n")
-                    if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'Thank You for using our tool, please join our telegram channe: @{__CHANNEL_USERNAME__}.'))
+                    answ = Prompt.ask("[?] DESEJA SAIR ? USE Y PARA SIM E N PARA NAO", choices=["y", "n"], default="n")
+                    if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'Obrigado Por Usar Nossa Ferramenta, Junte-se Ao Nosso Instagram: @{__IG_USERNAME__}.'))
                     else: continue
                 else:
-                    print(Colorate.Horizontal(Colors.rainbow, 'FAILED.'))
-                    print(Colorate.Horizontal(Colors.rainbow, 'Please try again.'))
+                    print(Colorate.Horizontal(Colors.rainbow, 'FALHOU.'))
+                    print(Colorate.Horizontal(Colors.rainbow, 'Por favor, tente novamente.'))
                     sleep(2)
                     continue
             elif service == 24: # Change Races Wins
-                print(Colorate.Horizontal(Colors.rainbow, '[!] Insert how much races you win.'))
-                amount = IntPrompt.ask("[?] Amount")
-                console.print("[%] Changing your data: ", end=None)
+                print(Colorate.Horizontal(Colors.rainbow, '[!] Altere quantas corridas você ganhou.'))
+                amount = IntPrompt.ask("[?] Quantidade: ")
+                console.print("[%] Alterando seus dados: ", end=None)
                 if amount > 0 and amount <= 999999999999999999999999999:
                     if cpm.set_player_wins(amount):
-                        print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
+                        print(Colorate.Horizontal(Colors.rainbow, 'BEM-SUCEDIDO'))
                         print(Colorate.Horizontal(Colors.rainbow, '======================================'))
-                        answ = Prompt.ask("[?] Do You want to Exit ?", choices=["y", "n"], default="n")
-                        if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'Thank You for using our tool, please join our telegram channe: @{__CHANNEL_USERNAME__}.'))
+                        answ = Prompt.ask("[?] DESEJA SAIR ? USE Y PARA SIM E N PARA NAO", choices=["y", "n"], default="n")
+                        if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'Obrigado Por Usar Nossa Ferramenta, Junte-se Ao Nosso Instagram: @{__IG_USERNAME__}.'))
                         else: continue
                     else:
-                        print(Colorate.Horizontal(Colors.rainbow, 'ERRO.'))
-                        print(Colorate.Horizontal(Colors.rainbow, 'Please try again.'))
+                        print(Colorate.Horizontal(Colors.rainbow, 'FALHOU.'))
+                        print(Colorate.Horizontal(Colors.rainbow, 'Por favor, tente novamente.'))
                         sleep(2)
                         continue
                 else:
-                    print(Colorate.Horizontal(Colors.rainbow, 'FAILED.'))
-                    print(Colorate.Horizontal(Colors.rainbow, '[!] Please use valid values.'))
+                    print(Colorate.Horizontal(Colors.rainbow, 'FALHOU.'))
+                    print(Colorate.Horizontal(Colors.rainbow, 'Por favor, use valores válidos.'))
                     sleep(2)
                     continue
             elif service == 25: # Change Races Loses
-                print(Colorate.Horizontal(Colors.rainbow, '[!] Insert how much races you lose.'))
-                amount = IntPrompt.ask("[?] Amount")
-                console.print("[%] Changing your data: ", end=None)
+                print(Colorate.Horizontal(Colors.rainbow, '[!] Altere quantas corridas você perdeu.'))
+                amount = IntPrompt.ask("[?] Quantidade: ")
+                console.print("[%] Alterando seus dados: ", end=None)
                 if amount > 0 and amount <= 999999999999999999999:
                     if cpm.set_player_loses(amount):
-                        print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSO'))
+                        print(Colorate.Horizontal(Colors.rainbow, 'BEM-SUCEDIDO'))
                         print(Colorate.Horizontal(Colors.rainbow, '======================================'))
-                        answ = Prompt.ask("[?] Do You want to Exit ?", choices=["y", "n"], default="n")
-                        if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'Thank You for using our tool, please join our telegram channe: @{__CHANNEL_USERNAME__}.'))
+                        answ = Prompt.ask("[?] DESEJA SAIR ? USE Y PARA SIM E N PARA NAO", choices=["y", "n"], default="n")
+                        if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'Obrigado Por Usar Nossa Ferramenta, Junte-se Ao Nosso Instagram: @{__IG_USERNAME__}.'))
                         else: continue
                     else:
-                        print(Colorate.Horizontal(Colors.rainbow, 'FAILED.'))
-                        print(Colorate.Horizontal(Colors.rainbow, '[!] Please use valid values.'))
+                        print(Colorate.Horizontal(Colors.rainbow, 'FALHOU.'))
+                        print(Colorate.Horizontal(Colors.rainbow, 'Por favor, use valores válidos.'))
                         sleep(2)
                         continue
                 else:
-                    print(Colorate.Horizontal(Colors.rainbow, 'FAILED.'))
-                    print(Colorate.Horizontal(Colors.rainbow, '[!] Please use valid values.'))
+                    print(Colorate.Horizontal(Colors.rainbow, 'FALHOU.'))
+                    print(Colorate.Horizontal(Colors.rainbow, 'Por favor, use valores válidos.'))
                     sleep(2)
                     continue
             elif service == 26: # Clone Account
-                print(Colorate.Horizontal(Colors.rainbow, '[!] Please Enter Account Detalis.'))
-                to_email = prompt_valid_value("[?] Account Email", "Email", password=False)
-                to_password = prompt_valid_value("[?] Account Password", "Password", password=False)
-                console.print("[%] Cloning your account: ", end=None)
+                print(Colorate.Horizontal(Colors.rainbow, '[!] Por favor, insira os detalhes da conta.'))
+                to_email = prompt_valid_value("[?] INSIRA O EMAIL DA CONTA: ", "Email", password=False)
+                to_password = prompt_valid_value("[?] INSIRA A SENHA DA CONTA: ", "Password", password=False)
+                console.print("[%] Clonando sua conta: ", end=None)
                 if cpm.account_clone(to_email, to_password):
-                    print(Colorate.Horizontal(Colors.rainbow, 'SUCCESSFUL'))
+                    print(Colorate.Horizontal(Colors.rainbow, 'BEM-SUCEDIDO'))
                     print(Colorate.Horizontal(Colors.rainbow, '======================================'))
-                    answ = Prompt.ask("[?] Do You want to Exit ?", choices=["y", "n"], default="n")
-                    if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'Thank You for using our tool, please join our telegram channe: @{__CHANNEL_USERNAME__}.'))
+                    answ = Prompt.ask("[?] DESEJA SAIR ? USE Y PARA SIM E N PARA NAO", choices=["y", "n"], default="n")
+                    if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'Obrigado Por Usar Nossa Ferramenta, Junte-se Ao Nosso Instagram: @{__IG_USERNAME__}.'))
                     else: continue
                 else:
-                    print(Colorate.Horizontal(Colors.rainbow, 'FAILED.'))
-                    print(Colorate.Horizontal(Colors.rainbow, '[!] Please use valid values.'))
+                    print(Colorate.Horizontal(Colors.rainbow, 'FALHOU.'))
+                    print(Colorate.Horizontal(Colors.rainbow, 'Por favor, use valores válidos.'))
                     sleep(2)
                     continue
             else: continue

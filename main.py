@@ -13,9 +13,9 @@ from pystyle import Colors, Colorate
 
 from noelcpm import CPMnoelcpm
 
-__OWNER_USERNAME__ = "NOEL_VENDASCPM"
-__IG_USERNAME__   = "noel_vendascpm"
-__WHATS_OWNER__   = "+5511978458163"
+__OWNER_USERNAME__ = "MK_PLOTS"
+__IG_USERNAME__   = "MK_PLOTS"
+__WHATS_OWNER__   = "21998189601"
 
 def signal_handler(sig, frame):
     print("\n Adeus...")
@@ -40,7 +40,7 @@ def gradient_text(text, colors):
 
 def banner(console):
     os.system('cls' if os.name == 'nt' else 'clear')
-    brand_name =  "ATENCAO PARA USAR A FERRAMENTA E NECESSARIO ADICIONAR CREDITOS COM O @noel_vendascpm."
+    brand_name =  "ATENCAO PARA USAR A FERRAMENTA E NECESSARIO ADICIONAR CREDITOS COM O @mk_plots."
     colors = [
         "rgb(255,0,0)", "rgb(255,69,0)", "rgb(255,140,0)", "rgb(255,215,0)", "rgb(173,255,47)", 
         "rgb(0,255,0)", "rgb(0,255,255)", "rgb(0,191,255)", "rgb(0,0,255)", "rgb(139,0,255)",
@@ -51,7 +51,7 @@ def banner(console):
     print(Colorate.Horizontal(Colors.rainbow, '=================================================================='))
     print(Colorate.Horizontal(Colors.rainbow, '\t         𝐅𝐀𝐂𝐀 𝐋𝐎𝐆𝐎𝐔𝐓 𝐃𝐎 𝐂𝐏𝐌 𝐀𝐍𝐓𝐄𝐒 𝐃𝐄 𝐔𝐒𝐀𝐑 𝐄𝐒𝐓𝐀 𝐅𝐄𝐑𝐑𝐀𝐌𝐄𝐍𝐓𝐀'))
     print(Colorate.Horizontal(Colors.rainbow, '    𝐂𝐎𝐌𝐏𝐀𝐑𝐓𝐈𝐋𝐇𝐀𝐑 𝐀 𝐂𝐇𝐀𝐕𝐄 𝐃𝐄 𝐀𝐂𝐄𝐒𝐒𝐎 𝐍𝐀𝐎 𝐄 𝐏𝐄𝐑𝐌𝐈𝐓𝐈𝐃𝐎 𝐒𝐄𝐑𝐀 𝐁𝐋𝐎𝐐𝐔𝐄𝐀𝐃𝐎'))
-    print(Colorate.Horizontal(Colors.rainbow, f' ‌           𝐓𝐄𝐋𝐄𝐆𝐑𝐀𝐌: @{__OWNER_USERNAME__} - 𝐈𝐍𝐒𝐓𝐀𝐆𝐑𝐀𝐌 @{__IG_USERNAME__} - 𝐖𝐇𝐀𝐓𝐒𝐀𝐏𝐏 {__WHATS_OWNER__}'))
+    print(Colorate.Horizontal(Colors.rainbow, f' ‌           𝐓𝐄𝐋𝐄𝐆𝐑𝐀𝐌: @{__mk_plots__} - 𝐈𝐍𝐒𝐓𝐀𝐆𝐑𝐀𝐌 @{__mk_plots__} - 𝐖𝐇𝐀𝐓𝐒𝐀𝐏𝐏 {__21998189601__}'))
     print(Colorate.Horizontal(Colors.rainbow, '=================================================================='))
 
 def load_player_data(cpm):

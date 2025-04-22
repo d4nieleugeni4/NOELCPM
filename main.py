@@ -13,9 +13,9 @@ from pystyle import Colors, Colorate
 
 from noelcpm import CPMnoelcpm
 
-__OWNER_USERNAME__ = "MK_PLOTS"
-__IG_USERNAME__   = "MK_PLOTS"
-__WHATS_OWNER__   = "21998189601"
+__OWNER_USERNAME__ = "NOEL_VENDAS"
+__IG_USERNAME__   = "NOEL_VENDAS"
+__WHATS_OWNER__   = "11978458163"
 
 def signal_handler(sig, frame):
     print("\n Adeus...")

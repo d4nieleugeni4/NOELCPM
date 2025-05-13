@@ -70,10 +70,10 @@ def load_player_data(cpm):
             print(Colorate.Horizontal(Colors.rainbow, f'GOLDS : {data.get("coin")}.'))
             
         else:
-            print(Colorate.Horizontal(Colors.rainbow, '! ERROR: new accounts most be signed-in to the game at least once !.'))
+            print(Colorate.Horizontal(Colors.rainbow, '! ERRO: Contas novas devem ser movimentadas ao menos uma vez !.'))
             exit(1)
     else:
-        print(Colorate.Horizontal(Colors.rainbow, '! ERROR: seems like your login is not properly set !.'))
+        print(Colorate.Horizontal(Colors.rainbow, '! ERRO: Seu login não está configurado corretamente !.'))
         exit(1)
 
 
@@ -577,23 +577,23 @@ if __name__ == "__main__":
                 console.print("[%] SALVANDO DADOS: ", end=None)
                 if amount > 0 and amount <= 999999999999999999999:
                     if cpm.set_player_loses(amount):
-                        print(Colorate.Horizontal(Colors.rainbow, 'SUCESSO'))
+                        print(Colorate.Horizontal(Colors.rainbow, 'BOA PARÇA, CONCLUIDO'))
                         print(Colorate.Horizontal(Colors.rainbow, '======================================'))
                         answ = Prompt.ask("[?] DESEJA SAIR? USE  ( Y ) PARA SIM E ( N ) PARA NAK ", choices=["y", "n"], default="n")
                         if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'VOLTE SEMPRE....: @{__CHANNEL_USERNAME__}.'))
                         else: continue
                     else:
-                        print(Colorate.Horizontal(Colors.rainbow, 'FALHA.'))
-                        print(Colorate.Horizontal(Colors.rainbow, '[!] USE VALORES VALIDOS.'))
+                        print(Colorate.Horizontal(Colors.rainbow, 'VACILOU HEIN.'))
+                        print(Colorate.Horizontal(Colors.rainbow, '[!] PÕE OS BAGULHO CERTO PARÇA.'))
                         sleep(2)
                         continue
                 else:
-                    print(Colorate.Horizontal(Colors.rainbow, 'FALHA.'))
-                    print(Colorate.Horizontal(Colors.rainbow, '[!] USE VALORES VALIDOS.'))
+                    print(Colorate.Horizontal(Colors.rainbow, 'VACILOU HEIN .'))
+                    print(Colorate.Horizontal(Colors.rainbow, '[!] PÕE OS BAGULHO CERTO PARÇA.'))
                     sleep(2)
                     continue
             elif service == 26: # Clone Account
-                print(Colorate.Horizontal(Colors.rainbow, '[!] ADICIONE O EMAIL PARA CLONAR A CONTA NELE ( OBS: EMAIL DEVE SER CRIADO NA OPCAO 9.'))
+                print(Colorate.Horizontal(Colors.rainbow, '[!] ADICIONE O EMAIL PARA CLONAR A CONTA NELE ( OBS:  DEVE SAIR DAS CONTAS ANTES!.'))
                 to_email = prompt_valid_value("[?] EMAIL DA CONTA", "Email", password=False)
                 to_password = prompt_valid_value("[?] SENHA DA CONTA", "Password", password=False)
                 console.print("[%] CLONANDO SUA CONTA: ", end=None)
@@ -604,8 +604,8 @@ if __name__ == "__main__":
                     if answ == "y": print(Colorate.Horizontal(Colors.rainbow, f'VOLTE SEMPRE....: @{__CHANNEL_USERNAME__}.'))
                     else: continue
                 else:
-                    print(Colorate.Horizontal(Colors.rainbow, 'FALHA.'))
-                    print(Colorate.Horizontal(Colors.rainbow, '[!] USE VALORES VALIDOS.'))
+                    print(Colorate.Horizontal(Colors.rainbow, 'VACILOU HEIN.'))
+                    print(Colorate.Horizontal(Colors.rainbow, '[!] USE  O BAGULHO  CERTO PARÇA.'))
                     sleep(2)
                     continue
             else: continue

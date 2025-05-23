@@ -37,21 +37,44 @@ def gradient_text(text, colors):
         colorful_text.append("\n")
     return colorful_text
 
+#BANNER PRINCIPAL
+
 def banner(console):
     os.system('cls' if os.name == 'nt' else 'clear')
-    brand_name =  "ATENCAO PARA USAR A FERRAMENTA E NECESSARIO ADICIONAR CREDITOS COM O ADM NOEL VENDAS."
-    colors = [
-        "rgb(255,0,0)", "rgb(255,69,0)", "rgb(255,140,0)", "rgb(255,215,0)", "rgb(173,255,47)", 
-        "rgb(0,255,0)", "rgb(0,255,255)", "rgb(0,191,255)", "rgb(0,0,255)", "rgb(139,0,255)",
-        "rgb(255,0,255)"
+    
+    # Cores atualizadas
+    light_gold = Style(color="rgb(255,215,0)")  # Dourado claro (para texto e blocos)
+    white = Style(color="white")               # Branco (para contornos)
+    
+    # Painel com destaque especial para os contornos das letras
+    panel = [
+
+        "│                              ███╗   ██╗ ██████╗ ███████╗██╗                                   │", 
+        "│                              ████╗  ██║██╔═══██╗██╔════╝██║                                   │",
+        "│                              ██╔██╗ ██║██║   ██║█████╗  ██║                                   │",
+        "│                              ██║╚██╗██║██║   ██║██╔══╝  ██║                                   │",
+        "│                              ██║ ╚████║╚██████╔╝███████╗███████╗                              │",
+        "│                              ╚═╝  ╚═══╝ ╚═════╝ ╚══════╝╚══════╝                              │"
     ]
-    colorful_text = gradient_text(brand_name, colors)
-    console.print(colorful_text)
-    print(Colorate.Horizontal(Colors.rainbow, '=================================================================='))
-    print(Colorate.Horizontal(Colors.rainbow, '\t         𝐅𝐀𝐂𝐀 𝐋𝐎𝐆𝐎𝐔𝐓 𝐃𝐎 𝐂𝐏𝐌 𝐀𝐍𝐓𝐄𝐒 𝐃𝐄 𝐔𝐒𝐀𝐑 𝐄𝐒𝐓𝐀 𝐅𝐄𝐑𝐑𝐀𝐌𝐄𝐍𝐓𝐀'))
-    print(Colorate.Horizontal(Colors.rainbow, '    𝐂𝐎𝐌𝐏𝐀𝐑𝐓𝐈𝐋𝐇𝐀𝐑 𝐀 𝐂𝐇𝐀𝐕𝐄 𝐃𝐄 𝐀𝐂𝐄𝐒𝐒𝐎 𝐍𝐀𝐎 𝐄 𝐏𝐄𝐑𝐌𝐈𝐓𝐈𝐃𝐎 𝐒𝐄𝐑𝐀 𝐁𝐋𝐎𝐐𝐔𝐄𝐀𝐃𝐎'))
-    print(Colorate.Horizontal(Colors.rainbow, f' ‌           INSTAGRAM: @{__CHANNEL_USERNAME__} WHATSAPP @{__GROUP_USERNAME__}'))
-    print(Colorate.Horizontal(Colors.rainbow, '=================================================================='))
+    
+    # Símbolos que devem ficar BRANCOS (contornos)
+    white_symbols = ['═', '║', '╔', '╗', '╚', '╝', '╠', '╣', '╦', '╩', '╬', '┌', '┐', '└', '┘', '├', '┤', '┬', '┴', '│', '─']
+    
+    for line in panel:
+        colored_line = Text()
+        for char in line:
+            if char in white_symbols:  # Contornos em branco
+                colored_line.append(char, white)
+            elif char == '█':  # Blocos em dourado
+                colored_line.append(char, light_gold)
+            else:  # Texto normal em dourado
+                colored_line.append(char, light_gold)
+        console.print(colored_line)
+    
+    print()  # Espaço antes dos campos de entrada
+
+
+
 
 def load_player_data(cpm):
     response = cpm.get_player_data()
@@ -127,6 +150,20 @@ def rainbow_gradient_string(customer_name):
 
 if __name__ == "__main__":
     console = Console()
+
+# Estilos personalizados para menu
+style_number = Style(color="rgb(255,215,0)")   # dourado
+style_name = Style(color="white")              # branco
+style_value = Style(color="grey70")            # cinza
+
+def print_custom_menu_option(number, name, value):
+    line = Text()
+    line.append(f"{number:>2}", style_number)
+    line.append(": ", style_name)
+    line.append(f"{name:<35}", style_name)
+    line.append(f"{value}", style_value)
+    console.print(line)
+
     signal.signal(signal.SIGINT, signal_handler)
     while True:
         banner(console)
@@ -163,33 +200,33 @@ if __name__ == "__main__":
             load_key_data(cpm)
             load_client_details()
             choices = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26"]
-            print(Colorate.Horizontal(Colors.rainbow, '{01}: ADICIONAR DINHEIRO           1.000K'))
-            print(Colorate.Horizontal(Colors.rainbow, '{02}: ADICIONAR GOLDS              3.500K'))
-            print(Colorate.Horizontal(Colors.rainbow, '{03}: INSERIR RANK KING            4.000K'))
-            print(Colorate.Horizontal(Colors.rainbow, '{04}: MUDAR ID                     3.500K'))
-            print(Colorate.Horizontal(Colors.rainbow, '{05}: MUDAR NOME                   100 '))
-            print(Colorate.Horizontal(Colors.rainbow, '{06}: MUDAR NOME ( RGB )           100'))
-            print(Colorate.Horizontal(Colors.rainbow, '{07}: NUMEROS PLACAS               2.000K'))
-            print(Colorate.Horizontal(Colors.rainbow, '{08}: DELETAR CONTA                GRATIS '))
-            print(Colorate.Horizontal(Colors.rainbow, '{09}: REGISTRAR CONTA              GRATIS'))
-            print(Colorate.Horizontal(Colors.rainbow, '{10}: DELETAR AMIGOS               500'))
-            print(Colorate.Horizontal(Colors.rainbow, '{11}: DESBLOQUEAR CARROS PAGOS     4.000K'))
-            print(Colorate.Horizontal(Colors.rainbow, '{12}: DESBLOQUEAR TODOS CARROS     3.000K'))
-            print(Colorate.Horizontal(Colors.rainbow, '{13}: SIRENE EM TODOS CARROS       2.000K'))
-            print(Colorate.Horizontal(Colors.rainbow, '{14}: DESBLOQUEAR W16              3.000K'))
-            print(Colorate.Horizontal(Colors.rainbow, '{15}: DESBLOQUEAR BUZINAS          3.000K'))
-            print(Colorate.Horizontal(Colors.rainbow, '{16}: MOTOR NAO QUEBRA             2.000K'))
-            print(Colorate.Horizontal(Colors.rainbow, '{17}: GASOLINA INFINITA            2.000K'))
-            print(Colorate.Horizontal(Colors.rainbow, '{18}: DESBLOQUEAR CASA 3           3.500K'))
-            print(Colorate.Horizontal(Colors.rainbow, '{19}: DESBLOQUEAR FUMACA           2.000K'))
-            print(Colorate.Horizontal(Colors.rainbow, '{20}: DESBLOQUEAR ANIMAÇÕES        2.000K'))
-            print(Colorate.Horizontal(Colors.rainbow, '{21}: DESBLOQUEAR RODAS            4.000K'))
-            print(Colorate.Horizontal(Colors.rainbow, '{22}: DESBLOQUEAR ROUPAS MASCULINAS 3.000K'))
-            print(Colorate.Horizontal(Colors.rainbow, '{23}: DESBLOQUEAR ROUPAS FEMININAS  3.000K'))
-            print(Colorate.Horizontal(Colors.rainbow, '{24}: ALTERAR CORRIDAS GANHAS      1.000K'))
-            print(Colorate.Horizontal(Colors.rainbow, '{25}: ALTERAR CORRIDAS PERDIDAS    1.000K'))
-            print(Colorate.Horizontal(Colors.rainbow, '{26}: CLONAR CONTA                 5.000K'))
-            print(Colorate.Horizontal(Colors.rainbow, '{0} : SAIR'))
+            print_custom_menu_option("01", "ADICIONAR DINHEIRO", "1.000K")
+print_custom_menu_option("02", "ADICIONAR GOLDS", "3.500K")
+print_custom_menu_option("03", "INSERIR RANK KING", "4.000K")
+print_custom_menu_option("04", "MUDAR ID", "3.500K")
+print_custom_menu_option("05", "MUDAR NOME", "100")
+print_custom_menu_option("06", "MUDAR NOME ( RGB )", "100")
+print_custom_menu_option("07", "NUMEROS PLACAS", "2.000K")
+print_custom_menu_option("08", "DELETAR CONTA", "GRATIS")
+print_custom_menu_option("09", "REGISTRAR CONTA", "GRATIS")
+print_custom_menu_option("10", "DELETAR AMIGOS", "500")
+print_custom_menu_option("11", "DESBLOQUEAR CARROS PAGOS", "4.000K")
+print_custom_menu_option("12", "DESBLOQUEAR TODOS CARROS", "3.000K")
+print_custom_menu_option("13", "SIRENE EM TODOS CARROS", "2.000K")
+print_custom_menu_option("14", "DESBLOQUEAR W16", "3.000K")
+print_custom_menu_option("15", "DESBLOQUEAR BUZINAS", "3.000K")
+print_custom_menu_option("16", "MOTOR NAO QUEBRA", "2.000K")
+print_custom_menu_option("17", "GASOLINA INFINITA", "2.000K")
+print_custom_menu_option("18", "DESBLOQUEAR CASA 3", "3.500K")
+print_custom_menu_option("19", "DESBLOQUEAR FUMACA", "2.000K")
+print_custom_menu_option("20", "DESBLOQUEAR ANIMAÇÕES", "2.000K")
+print_custom_menu_option("21", "DESBLOQUEAR RODAS", "4.000K")
+print_custom_menu_option("22", "DESBLOQUEAR ROUPAS MASCULINAS", "3.000K")
+print_custom_menu_option("23", "DESBLOQUEAR ROUPAS FEMININAS", "3.000K")
+print_custom_menu_option("24", "ALTERAR CORRIDAS GANHAS", "1.000K")
+print_custom_menu_option("25", "ALTERAR CORRIDAS PERDIDAS", "1.000K")
+print_custom_menu_option("26", "CLONAR CONTA", "5.000K")
+print_custom_menu_option("0", "SAIR", "")
             
             print(Colorate.Horizontal(Colors.rainbow, '===============[ 𝐂𝐏𝐌☆ ]==============='))
             
